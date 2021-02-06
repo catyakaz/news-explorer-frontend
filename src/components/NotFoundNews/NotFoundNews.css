@@ -1,0 +1,28 @@
+.not-found-news {
+  background-color: #e5e5e5;
+}
+
+.not-found-news__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 374px;
+  width: 100%;
+}
+
+.not-found-new__sad-face {
+  display: block;
+}
+
+.not-found-news__title {
+  font-size: 26px;
+  color: #1a1b22;
+  font-family: 'Roboto Slab';
+  margin: 30px 0 16px;
+}
+
+.not-found-news__text {
+  color: #b6bcbf;
+  margin: 0;
+}
