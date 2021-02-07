@@ -1,0 +1,141 @@
+.popup {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup_visible {
+  display: flex;
+}
+
+.popup__inner {
+  width: 430px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  position: relative;
+  padding: 34px 36px;
+  box-sizing: border-box;
+}
+
+.popup__close-button {
+  position: absolute;
+  top: -46px;
+  right: -46px;
+  width: 40px;
+  height: 40px;
+  background-image: url('../../images/close.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+.popup__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__title {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.popup__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__input-label {
+  font-size: 12px;
+  color: #2f71e5;
+}
+
+.popup__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  color: #000000;
+  font-size: 14px;
+  padding: 12px 0;
+}
+
+.popup__input:focus {
+  border-bottom-color: #000000;
+  outline: none;
+}
+
+.popup__input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.popup__button {
+  width: 100%;
+  height: 64px;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+}
+
+.popup__error {
+  color: #ff0000;
+  font-size: 12px;
+  visibility: hidden;
+}
+
+.popup__error_show {
+  visibility: visible;
+}
+
+.popup__error_general {
+  text-align: center;
+}
+
+.popup__error_input {
+  margin-top: 0;
+}
+
+.popup__link-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.popup__link {
+  color: #2f71e5;
+  cursor: pointer;
+  padding: 0 7px;
+}
+
+@media screen and (max-width: 530px) {
+  .popup__inner {
+    height: 100%;
+    width: 100%;
+    margin-top: 90px;
+    padding: 16px 17px;
+  }
+
+  .popup__close-button {
+    right: 16px;
+    top: -35px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .popup__input {
+    padding: 7px 0;
+  }
+
+  .popup__error_general {
+    margin-top: 0;
+  }
+}
