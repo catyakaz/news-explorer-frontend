@@ -70,6 +70,11 @@
   padding: 12px 0;
 }
 
+.popup__input:invalid {
+  box-shadow: none;
+  outline: none;
+}
+
 .popup__input:focus {
   border-bottom-color: #000000;
   outline: none;
