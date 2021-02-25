@@ -1,0 +1,17 @@
+.network-error {
+  background-color: #e5e5e5;
+}
+
+.network-error__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.network-error__message {
+  font-size: 26px;
+  color: #1a1b22;
+  font-family: 'Roboto Slab';
+  width: 700px;
+}

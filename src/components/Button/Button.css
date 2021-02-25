@@ -11,14 +11,15 @@
   background-color: #e6e8eb;
   color: #b6bcbf;
   border: none;
+  cursor: initial;
 }
 
-.button:hover {
+.button:hover:not(.button_disabled) {
   background-color: #347eff;
   border: 1px solid #3473ff;
 }
 
-.button:active {
+.button:active:not(.button_disabled) {
   background-color: #2a65cc;
   border: 1px solid #2a65cc;
 }
