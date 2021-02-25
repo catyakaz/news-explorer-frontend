@@ -1,13 +1,13 @@
 .news-card-list {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
   grid-gap: 16px;
   justify-items: stretch;
 }
 
 @media screen and (max-width: 767px) {
   .news-card-list {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
   }
 }
 

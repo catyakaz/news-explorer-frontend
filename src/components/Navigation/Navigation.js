@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import { NavLink, Link } from 'react-router-dom';
 
+import CurrentUserContext from '../../contexts/CurrentUserContext';
+
 import './Navigation.css';
 
-function Navigation({ className, isDark, isLoggedIn, handleClick }) {
+function Navigation({ className, isDark, isLoggedIn, handleSignUp, handleSignOut }) {
   const [isOpened, setIsOpened] = useState(false);
+
+  const currentUser = useContext(CurrentUserContext);
 
   function handleClickMobileMenu() {
     setIsOpened((prevState) => !prevState);
+  }
+
+  function handleClick() {
+    if (currentUser) {
+      handleSignOut();
+    } else {
+      handleSignUp();
+    }
   }
 
   return (
@@ -35,21 +47,25 @@ function Navigation({ className, isDark, isLoggedIn, handleClick }) {
             >
               <li>Главная</li>
             </NavLink>
-            <NavLink
-              className="navigation__link"
-              activeClassName="navigation__link_active"
-              to="/saved-news"
-            >
-              <li>Сохраненные статьи</li>
-            </NavLink>
+            {
+              currentUser 
+                ? <NavLink
+                    className="navigation__link"
+                    activeClassName="navigation__link_active"
+                    to="/saved-news"
+                  >
+                    <li>Сохраненные статьи</li>
+                  </NavLink>
+                : ''
+            }
           </ul>
           <button
             className={`navigation__auth ${
-              isLoggedIn && 'navigation__auth_login'
+              currentUser ? 'navigation__auth_logged-in' : ''
             }`}
             onClick={handleClick}
           >
-            Грета
+            {currentUser ? currentUser.name : 'Авторизоваться'}
           </button>
         </div>
         <div
