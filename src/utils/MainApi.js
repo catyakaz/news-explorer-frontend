@@ -1,5 +1,5 @@
 class MainApi {
-  constructor(baseUrl = 'http://178.154.251.157') {
+  constructor(baseUrl = 'http://95.165.137.32') {
     this.baseUrl = baseUrl;
   }
 
